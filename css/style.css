@@ -1,0 +1,418 @@
+/* ======== ESTILO GERAL ======== */
+:root {
+  --azul1: #164757;
+  --azul2: #2395ba;
+  --turquesa: #00d8c6;
+  --puroturquesa:#01c290;
+  --branco: #ffffff;
+  --cinza: #f1f5f9;
+  --amarelo: #ffc94d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--cinza);
+  color: var(--azul1);
+  scroll-behavior: smooth;
+}
+
+/* ======== HEADER ======== */
+.container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(135deg, var(--azul1),
+  var(--azul2), 
+  var(--turquesa));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:   3%;
+  color: var(--branco);
+  box-shadow: 0 2px 5px rgba(9, 28, 35, 0.5);
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.nav a {
+  color: var(--branco);
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: var(--amarelo);
+}
+
+/* ======== LOGIN ======== */
+.login-compact {
+  display: flex;
+  gap: 5px;
+}
+
+.login-compact input {
+  padding: 5px 8px;
+  border-radius: 4px;
+  border: none;
+}
+
+.login-compact button {
+  background: var(--amarelo);
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-compact button:hover {
+  background: #ffe082;
+}
+
+.login-msg {
+  color: var(--branco);
+  font-size: 0.85rem;
+  margin-left: 10px;
+}
+
+/* ======== HERO ======== */
+.hero {
+  margin-top: 70px;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, var(--azul1), var(--turquesa));
+  color: var(--branco);
+  padding: 80px 10%;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 600px;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.hero-buttons a {
+  display: inline-block;
+  padding: 12px 24px;
+  margin-right: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: var(--amarelo);
+  color: var(--azul1);
+}
+
+.btn-secondary {
+  border: 2px solid var(--branco);
+  color: var(--branco);
+}
+
+.btn-primary:hover {
+  background: #ffe082;
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* ======== HERO IMAGE ======== */
+.hero-image {
+  border-radius: 50% 25% 50% 25% / 25% 50% 25% 50% ;
+  animation: float 81s ease-in-out infinite;
+   /* Estilize sua div de plano de fundo */
+    background-color: var(--amarelo);
+    width: 40%;
+    height: 80%;
+    position: absolute;
+    right: 1%;
+    /* Ela está no nível 1 */
+    z-index: 1; 
+}
+.hero-image2{
+  right: 0%;
+  width: 39%;
+  z-index: 2;
+  position: absolute;
+  animation: float 81s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ======== FUNCIONALIDADES ======== */
+section#funcionalidades{
+   background-color: #164757;
+}
+.features {
+ 
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.feature-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+
+/* ======== SEÇÕES ======== */
+.section {
+  text-align: center;
+  padding: 60px 10%;
+  background: var(--cinza);
+}
+
+.section h2 {
+  color: var(--azul1);
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.section p, .section li {
+  font-size: 1rem;
+  color: #475569;
+  margin-bottom: 10px;
+}
+
+#proposito {
+  background: #f9fafb;
+  padding: 80px 5%;
+  overflow: hidden;
+}
+
+.proposito-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* --- TEXTO NO TOPO --- */
+.proposito-texto {
+  max-width: 900px;
+  margin-bottom: 60px;
+  animation: fadeInUp 1000ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.proposito-texto h2 {
+  font-size: 2.5rem;
+  color: #111827;
+  margin-bottom: 20px;
+}
+
+.proposito-texto p {
+  font-size: 1.1rem;
+  color: #374151;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.linha-horizontal {
+  width: 120px;
+  height: 3px;
+  background: #3b82f6;
+  margin: 30px auto 0 auto;
+  border-radius: 10px;
+  animation: expandLine 1000ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* --- IMAGENS ABAIXO --- */
+.proposito-imagens {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.imagem-item {
+  width: 30%;
+  min-width: 280px;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  perspective: 500px;
+  opacity: 0;
+  transform: translate3d(0, 60px, 0);
+  animation: imagemAnimacao 1000ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.imagem-item:nth-child(2) {
+  animation-delay: 500ms;
+}
+.imagem-item:nth-child(3) {
+  animation-delay: 800ms;
+}
+
+.imagem-fundo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 4s ease;
+}
+
+.imagem-item:hover img {
+  transform: scale(1.05);
+}
+
+/* --- ANIMAÇÕES --- */
+@keyframes imagemAnimacao {
+  from {
+    transform: translate3d(0, 60px, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes expandLine {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 120px;
+    opacity: 1;
+  }
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 900px) {
+  .imagem-item {
+    width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .imagem-item
+
+
+.destaque {
+  background: #e2e8f0;
+}
+
+#finish, #section2{
+  background:var(--azul1);
+  color: var(--branco);
+}
+ 
+#finish h2,#section2 h2, #finish p, #section2 p{
+  color: var(--branco);
+}
+}
+/* ======== FOOTER ======== */
+.footer {
+  background: linear-gradient(135deg, var(--azul1), var(--azul2));
+  color: var(--branco);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  box-shadow: inset 0 0 10px rgba(255,255,255,0.2);
+}
+
+/* ======== BOTÃO TOPO ======== */
+#top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--azul2);
+  color: var(--branco);
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  display: none;
+}
+
+#top-btn:hover {
+  background: var(--turquesa);
+}
+
+/* ======== ANIMAÇÕES ======== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 3s forwards;
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUp 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
